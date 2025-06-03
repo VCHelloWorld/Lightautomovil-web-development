@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Lights - My Account</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="container">
+        <div class="logo">
+            <h1><a href="index.html">AutoLights</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="account.html">My Account</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="account-container-main"> <!-- Changed from account-container to avoid width conflict -->
+            <h2 class="page-title">My Account</h2> <!-- Used page-title for consistency -->
+            <p class="text-center" style="font-size: 1.2em; margin-bottom: 20px;">Welcome, [User Name]!</p> <!-- Placeholder for dynamic username -->
+
+            <section class="account-section-details">
+                <h3>Order History</h3>
+                <p>You have no recent orders.</p>
+                <!-- Example of how an order might look:
+                <div class="order-item">
+                    <p><strong>Order #12345</strong> - Date: 2024-05-20</p>
+                    <p>Status: Shipped</p>
+                    <p>Total: $75.50</p>
+                    <a href="order_detail.html?order_id=12345">View Details</a>
+                </div>
+                -->
+            </section>
+
+            <section class="account-section-details">
+                <h3>Account Details</h3>
+                <p>Manage your personal information, shipping addresses, and payment methods here.</p>
+                <p><strong>Email:</strong> user@example.com</p> <!-- Placeholder -->
+                <div class="mt-2">
+                    <a href="#" class="btn btn-secondary btn-sm">Edit Profile</a>
+                    <a href="#" class="btn btn-secondary btn-sm" style="margin-left: 10px;">Change Password</a>
+                </div>
+            </section>
+
+            <div class="text-center mt-3">
+                <a href="index.html?logout=true" class="btn btn-danger">Logout</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 AutoLights. All rights reserved.</p>
+    </footer>
+</body>
+</html>

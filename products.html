@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Lights - Products</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="container">
+        <div class="logo">
+            <h1><a href="index.html">AutoLights</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login/Account</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <h2 style="text-align: center; margin-bottom: 20px;">Our Products</h2>
+        <div class="products-page-container">
+            <aside class="products-sidebar">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Headlights</a></li>
+                    <li><a href="#">Taillights</a></li>
+                    <li><a href="#">Fog Lights</a></li>
+                    <li><a href="#">Interior Lights</a></li>
+                    <li><a href="#">LED Strips</a></li>
+                    <li><a href="#">Work Lights</a></li>
+                    <li><a href="#">Off-Road Lights</a></li>
+                    <li><a href="#">Accessory Lights</a></li>
+                </ul>
+                <!-- Placeholder for dropdown category selection on smaller screens if needed -->
+                <select style="width:100%; margin-top: 20px; padding: 8px; display:none;" onchange="window.location.href=this.value" class="form-group">
+                    <option value="#">Select Category...</option>
+                    <option value="#">Headlights</option>
+                    <option value="#">Taillights</option>
+                    <option value="#">Fog Lights</option>
+                    <option value="#">Interior Lights</option>
+                    <option value="#">LED Strips</option>
+                    <option value="#">Work Lights</option>
+                </select>
+            </aside>
+            <section class="product-grid">
+                <!-- Sample Product 1 -->
+                <div class="product-item">
+                    <img src="images/placeholder.png" alt="LED Headlight Bulb H11">
+                    <h4>LED Headlight Bulb H11</h4>
+                    <p class="price">$25.99</p>
+                    <p class="description">Bright white LED headlight bulb, 6000K, Pack of 2. Easy plug-and-play installation.</p>
+                    <a href="product_detail.html?product_id=1" class="btn btn-primary">View Details</a>
+                </div>
+
+                <!-- Sample Product 2 -->
+                <div class="product-item">
+                    <img src="images/placeholder.png" alt="Amber LED Fog Light">
+                    <h4>Amber LED Fog Light H8/H11</h4>
+                    <p class="price">$19.50</p>
+                    <p class="description">High-intensity amber LED fog light. Improves visibility in harsh conditions. Sold individually.</p>
+                    <a href="product_detail.html?product_id=2" class="btn btn-primary">View Details</a>
+                </div>
+
+                <!-- Sample Product 3 -->
+                <div class="product-item">
+                    <img src="images/placeholder.png" alt="Interior LED Dome Light">
+                    <h4>Universal Interior LED Dome Light</h4>
+                    <p class="price">$12.00</p>
+                    <p class="description">Bright cool white LED dome light. Universal fitment for most vehicles. Low power consumption.</p>
+                    <a href="product_detail.html?product_id=3" class="btn btn-primary">View Details</a>
+                </div>
+
+                <!-- Sample Product 4 -->
+                <div class="product-item">
+                    <img src="images/placeholder.png" alt="Red LED Brake Light">
+                    <h4>Red LED Brake/Tail Light 7443</h4>
+                    <p class="price">$15.99</p>
+                    <p class="description">Super bright red LED bulb for brake and tail lights. Long-lasting and energy efficient. Pack of 2.</p>
+                    <a href="product_detail.html?product_id=4" class="btn btn-primary">View Details</a>
+                </div>
+                 <!-- Sample Product 5 -->
+                <div class="product-item">
+                    <img src="images/placeholder.png" alt="Off-Road LED Bar">
+                    <h4>20-Inch Off-Road LED Light Bar</h4>
+                    <p class="price">$75.00</p>
+                    <p class="description">Powerful spot/flood combo LED light bar for off-road adventures. Durable and waterproof.</p>
+                    <a href="product_detail.html?product_id=5" class="btn btn-primary">View Details</a>
+                </div>
+                 <!-- Sample Product 6 -->
+                <div class="product-item">
+                    <img src="images/placeholder.png" alt="Flexible LED Strip">
+                    <h4>Blue Flexible LED Strip (5m)</h4>
+                    <p class="price">$22.50</p>
+                    <p class="description">5-meter flexible LED strip with adhesive backing. Great for accent lighting. Waterproof.</p>
+                    <a href="product_detail.html?product_id=6" class="btn btn-primary">View Details</a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 AutoLights. All rights reserved.</p>
+    </footer>
+</body>
+</html>

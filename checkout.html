@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Lights - Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="container">
+        <div class="logo">
+            <h1><a href="index.html">AutoLights</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login/Account</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="checkout-container">
+            <h2 class="checkout-title">Checkout</h2>
+
+            <form id="checkout-form">
+                <!-- Shipping Information -->
+                <section class="checkout-section">
+                    <h3>Shipping Information</h3>
+                    <div class="form-grid-checkout">
+                        <div class="form-group">
+                            <label for="ship-name">Full Name</label>
+                            <input type="text" id="ship-name" name="ship_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ship-address1">Address Line 1</label>
+                            <input type="text" id="ship-address1" name="ship_address1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ship-address2">Address Line 2 (Optional)</label>
+                            <input type="text" id="ship-address2" name="ship_address2">
+                        </div>
+                        <div class="form-group">
+                            <label for="ship-city">City</label>
+                            <input type="text" id="ship-city" name="ship_city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ship-state">State/Province</label>
+                            <input type="text" id="ship-state" name="ship_state" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ship-zip">Zip/Postal Code</label>
+                            <input type="text" id="ship-zip" name="ship_zip" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ship-country">Country</label>
+                            <input type="text" id="ship-country" name="ship_country" required>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Billing Information -->
+                <section class="checkout-section">
+                    <h3>Billing Information</h3>
+                    <div class="form-group">
+                        <input type="checkbox" id="same-as-shipping" name="same_as_shipping" onchange="toggleBillingAddress(this.checked)" style="width: auto; margin-right: 5px;">
+                        <label for="same-as-shipping" style="display: inline; font-weight: normal;">Billing address same as shipping</label>
+                    </div>
+                    <div id="billing-address-fields" class="form-grid-checkout" style="margin-top: 15px;">
+                        <div class="form-group">
+                            <label for="bill-name">Full Name</label>
+                            <input type="text" id="bill-name" name="bill_name">
+                        </div>
+                        <div class="form-group">
+                            <label for="bill-address1">Address Line 1</label>
+                            <input type="text" id="bill-address1" name="bill_address1">
+                        </div>
+                        <div class="form-group">
+                            <label for="bill-address2">Address Line 2 (Optional)</label>
+                            <input type="text" id="bill-address2" name="bill_address2">
+                        </div>
+                        <div class="form-group">
+                            <label for="bill-city">City</label>
+                            <input type="text" id="bill-city" name="bill_city">
+                        </div>
+                        <div class="form-group">
+                            <label for="bill-state">State/Province</label>
+                            <input type="text" id="bill-state" name="bill_state">
+                        </div>
+                        <div class="form-group">
+                            <label for="bill-zip">Zip/Postal Code</label>
+                            <input type="text" id="bill-zip" name="bill_zip">
+                        </div>
+                        <div class="form-group">
+                            <label for="bill-country">Country</label>
+                            <input type="text" id="bill-country" name="bill_country">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Order Summary -->
+                <section class="checkout-section">
+                    <h3>Order Summary</h3>
+                    <p>Review your items below:</p>
+                    <!-- In a real application, this would be dynamically populated -->
+                    <ul>
+                        <li>LED Headlight Bulb H11 - PRO Series (2) - $51.98</li>
+                        <li>Universal Interior LED Dome Light (1) - $12.00</li>
+                        <li>Amber LED Fog Light H8/H11 (2) - $39.00</li>
+                    </ul>
+                    <p><strong>Total: $102.98</strong></p>
+                </section>
+
+                <!-- Payment Method -->
+                <section class="checkout-section">
+                    <h3>Payment Method</h3>
+                    <div class="payment-options">
+                        <label><input type="radio" name="payment_method" value="cc" checked style="width: auto; margin-right: 5px;"> Credit Card</label>
+                        <label><input type="radio" name="payment_method" value="paypal" style="width: auto; margin-right: 5px;"> PayPal</label>
+                    </div>
+                    <div class="credit-card-details-checkout" id="credit-card-fields">
+                        <p class="disclaimer"><strong>Note:</strong> For demonstration purposes only. Do not enter real credit card details.</p>
+                        <div class="form-grid-checkout">
+                            <div class="form-group">
+                                <label for="cc-number">Card Number (Placeholder)</label>
+                                <input type="text" id="cc-number" name="cc_number" placeholder="xxxx-xxxx-xxxx-xxxx">
+                            </div>
+                            <div class="form-group">
+                                <label for="cc-expiry">Expiry Date (Placeholder)</label>
+                                <input type="text" id="cc-expiry" name="cc_expiry" placeholder="MM/YY">
+                            </div>
+                            <div class="form-group">
+                                <label for="cc-cvv">CVV (Placeholder)</label>
+                                <input type="text" id="cc-cvv" name="cc_cvv" placeholder="xxx">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <button type="submit" class="btn btn-primary btn-block" style="font-size: 1.2em; padding: 12px;">Place Order</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 AutoLights. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleBillingAddress(checked) {
+            const billingFields = document.getElementById('billing-address-fields');
+            const inputs = billingFields.querySelectorAll('input[type="text"]'); // Target specific inputs
+            if (checked) {
+                billingFields.style.display = 'none';
+                inputs.forEach(input => input.required = false);
+            } else {
+                billingFields.style.display = 'grid';
+                inputs.forEach(input => {
+                    // Only set required if it's a field that should generally be required
+                    // For this example, assuming all visible billing fields are required
+                    if(input.id !== 'bill-address2') { // Address line 2 is optional
+                        input.required = true;
+                    }
+                });
+            }
+        }
+        // Initialize billing address visibility
+        document.addEventListener('DOMContentLoaded', function() {
+            const isChecked = document.getElementById('same-as-shipping').checked;
+            toggleBillingAddress(isChecked);
+            // Ensure billing fields are correctly set as required or not on load
+             if (!isChecked) {
+                document.getElementById('bill-name').required = true;
+                document.getElementById('bill-address1').required = true;
+                document.getElementById('bill-city').required = true;
+                document.getElementById('bill-state').required = true;
+                document.getElementById('bill-zip').required = true;
+                document.getElementById('bill-country').required = true;
+            }
+        });
+    </script>
+</body>
+</html>
